@@ -5,7 +5,9 @@ package calculator;
 option go_package = "github.com/katarzynakawala/grpc-go/calculator/proto";
 
 import "sum.proto";
+import "primes.proto";
 
 service CalculatorService{
     rpc Sum(SumRequest) returns (SumResponse);
+    rpc CalculatePrimes(CalcPrimesRequest) returns (stream PrimesResponse);
 }
